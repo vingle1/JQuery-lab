@@ -14,22 +14,38 @@
       }
     </style>
     <script type="text/javascript" src="jquery/js/jquery-1.9.0.min.js"></script>
-    
+
     <script>
     $(document).ready(function() {
 
       /* Your code goes here */
 
-      
+      //selecting the change button with id selector ('#')
+      var button = $("#button_change");
+
+      //setting a click listner
+      $(button).click(function(){
+        //retrieving and storing the color input value
+        var inputValue = $("#input_color").val();
+
+        //select all appropriate text with class selector ('.')
+         var element = $(".cow_color");
+
+         //replace the text with the stored value
+         $(element).html(inputValue);
+          
+      });
+
+
     });
     </script>
   </head>
   <body>
-     
+
     <h2><span class="cow_color">Blue</span> Cow by Gelett Burgess (published in The Lark, 1895)</h2>
-    <p>I never saw a <span class="cow_color">Blue</span> Cow, 
-      I never hope to see one; 
-      But I can tell you, anyhow, 
+    <p>I never saw a <span class="cow_color">Blue</span> Cow,
+      I never hope to see one;
+      But I can tell you, anyhow,
       I'd rather see than be one.
     </p>
 
